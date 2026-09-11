@@ -1,8 +1,10 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { randomBytes } from "crypto"
+import { isAdminRequest } from "@/lib/admin-auth"
 
 // Generate tracking links with unique IDs
 export async function POST(request: NextRequest) {
+  if (!isAdminRequest(request)) return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
   try {
     const { email, page } = await request.json()
 

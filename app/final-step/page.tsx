@@ -10,7 +10,7 @@ export default function FinalStepPage() {
   const [isPlaying, setIsPlaying] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null)
 
-  const kitProductUrl = "https://digital-arkitects.kit.com/products/ai-revolution?step=checkout"
+  const checkoutUrl = "/checkout?product=main-47"
 
   const toggleMute = () => {
     if (!videoRef.current) return
@@ -141,7 +141,7 @@ export default function FinalStepPage() {
                 <p className="text-sm md:text-base font-bold mb-4">Today Only: $47</p>
                 <p className="text-xs text-gray-600 mb-6">Click before it's gone!</p>
               <a
-                href={kitProductUrl}
+                href={checkoutUrl}
                 className="inline-flex items-center justify-center bg-[#5B5FED] hover:bg-[#4A4EDD] text-white font-bold py-3 px-6 md:px-8 rounded-full text-base md:text-lg transition-colors w-full"
               >
                 BUY NOW FOR $47
@@ -179,7 +179,7 @@ export default function FinalStepPage() {
 
             <div className="text-center">
               <a
-                href={kitProductUrl}
+                href={checkoutUrl}
                 className="inline-flex items-center justify-center bg-[#5B5FED] hover:bg-[#4A4EDD] text-white font-bold py-4 px-12 rounded-full text-xl transition-colors"
               >
                 GAIN ACCESS

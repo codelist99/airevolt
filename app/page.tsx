@@ -50,9 +50,20 @@ export default function Home() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitMessage("")
-    localStorage.setItem("leadData", JSON.stringify(leadData))
-    setSubmitMessage("Success! Redirecting...")
-    setTimeout(() => router.push("/final-step"), 1200)
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(leadData),
+      })
+      if (!response.ok) throw new Error("Unable to save lead")
+      localStorage.setItem("leadData", JSON.stringify(leadData))
+      setSubmitMessage("Success! Redirecting...")
+      setTimeout(() => router.push("/final-step"), 600)
+    } catch {
+      setSubmitMessage("We could not submit your details. Please try again.")
+      setIsSubmitting(false)
+    }
   }
 
   return (

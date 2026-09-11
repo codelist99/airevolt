@@ -3,8 +3,8 @@
 import { Phone, CheckCircle, Calendar } from "lucide-react"
 
 export default function Confirmation() {
-  const phoneNumber = "682-327-0573"
-  const formattedPhone = "(682) 327-0573"
+  const phoneNumber = "+18582571162"
+  const formattedPhone = "(858) 257-1162"
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center px-4 py-12">

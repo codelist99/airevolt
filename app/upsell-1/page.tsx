@@ -2,15 +2,12 @@
 
 import { useState, useEffect, useRef } from "react"
 import { CheckCircle2, Volume2 } from "lucide-react"
-import KitCheckoutButton from "@/components/KitCheckoutButton"
 
 export default function Upsell1Page() {
   const [isMuted, setIsMuted] = useState(true)
   const [isPlaying, setIsPlaying] = useState(false)
   const [seatsRemaining, setSeatsRemaining] = useState(7)
   const videoRef = useRef<HTMLVideoElement>(null)
-
-  const kitUpsellUrl = "https://digital-arkitects.kit.com/products/ai-revolution-upsell?step=checkout"
 
   useEffect(() => {
     const timer1 = setTimeout(() => setSeatsRemaining(6), 20000) // 20 seconds
@@ -136,15 +133,13 @@ export default function Upsell1Page() {
           </div>
 
           <div className="rounded-2xl bg-slate-50 border border-slate-200 p-4 mb-6 text-center text-sm text-slate-700">
-            Complete your upgrade instantly using the Kit checkout below.
+            Complete your upgrade securely using Authorize.Net.
           </div>
 
           <div className="space-y-4">
-            <KitCheckoutButton
-              productUrl={kitUpsellUrl}
-              label="YES! ADD TO MY ORDER"
-              className="inline-flex w-full justify-center rounded-full bg-yellow-400 px-6 py-4 text-xl font-bold text-black shadow-lg transition hover:bg-yellow-500"
-            />
+            <a href="/checkout?product=upsell-97" className="inline-flex w-full justify-center rounded-full bg-yellow-400 px-6 py-4 text-xl font-bold text-black shadow-lg transition hover:bg-yellow-500">
+              YES! ADD TO MY ORDER
+            </a>
 
             <button
               onClick={() => (window.location.href = "/confirmation")}

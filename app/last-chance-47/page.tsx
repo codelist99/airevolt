@@ -2,12 +2,9 @@
 
 import { useState } from "react"
 import { Check, X, Clock, Zap, TrendingUp } from "lucide-react"
-import KitCheckoutButton from "@/components/KitCheckoutButton"
 
 export default function LastChance47() {
   const [showCheckout, setShowCheckout] = useState(false)
-  const kitDownsellUrl = "https://digital-arkitects.kit.com/products/ai-revolution-downsell?step=checkout"
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50">
       <section className="py-12 px-4">
@@ -71,11 +68,9 @@ export default function LastChance47() {
             </button>
             <h2 className="text-2xl font-bold text-center mb-2">Secure Your $47 Deal!</h2>
             <p className="text-center text-gray-600 mb-6">Get instant access to Infinite AI Revolution</p>
-            <KitCheckoutButton
-              productUrl={kitDownsellUrl}
-              label="Complete Order with Kit Checkout"
-              className="w-full rounded-full bg-gradient-to-r from-red-600 to-orange-600 px-6 py-4 text-base font-bold text-white shadow-lg transition hover:from-red-700 hover:to-orange-700"
-            />
+            <a href="/checkout?product=downsell-47" className="block w-full rounded-full bg-gradient-to-r from-red-600 to-orange-600 px-6 py-4 text-center text-base font-bold text-white shadow-lg transition hover:from-red-700 hover:to-orange-700">
+              Complete Secure Order
+            </a>
           </div>
         </div>
       )}
