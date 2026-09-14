@@ -4,9 +4,9 @@ import { processPayment } from "@/lib/authorize-net"
 import { getDb } from "@/lib/db"
 
 const PRODUCTS = {
-  "main-47": { amount: 1, nextPath: "/upsell-1" },
-  "upsell-97": { amount: 1, nextPath: "/confirmation" },
-  "downsell-47": { amount: 1, nextPath: "/confirmation" },
+  "main-47": { amount: 47, nextPath: "/upsell-1" },
+  "upsell-97": { amount: 97, nextPath: "/confirmation" },
+  "downsell-47": { amount: 47, nextPath: "/confirmation" },
 } as const
 
 const checkoutSchema = z.object({

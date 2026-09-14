@@ -38,7 +38,7 @@ export default function LastChance47() {
                 </div>
                 <div className="text-center">
                   <p className="text-sm text-yellow-400 mb-2 font-bold">YOUR SPECIAL PRICE TODAY</p>
-                  <p className="text-6xl font-black text-yellow-400">$1</p>
+                  <p className="text-6xl font-black text-yellow-400">$47</p>
                 </div>
               </div>
             </div>
@@ -54,7 +54,7 @@ export default function LastChance47() {
               onClick={() => setShowCheckout(true)}
               className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-black text-2xl py-6 px-8 rounded-full transition-all shadow-2xl mb-4"
             >
-              YES! GIVE ME INFINITE AI FOR JUST $1
+              YES! GIVE ME INFINITE AI FOR JUST $47
             </button>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function LastChance47() {
             <button onClick={() => setShowCheckout(false)} className="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
               <X className="w-6 h-6" />
             </button>
-            <h2 className="text-2xl font-bold text-center mb-2">Secure Your $1 Deal!</h2>
+            <h2 className="text-2xl font-bold text-center mb-2">Secure Your $47 Deal!</h2>
             <p className="text-center text-gray-600 mb-6">Get instant access to Infinite AI Revolution</p>
             <a href="/checkout?product=downsell-47" className="block w-full rounded-full bg-gradient-to-r from-red-600 to-orange-600 px-6 py-4 text-center text-base font-bold text-white shadow-lg transition hover:from-red-700 hover:to-orange-700">
               Complete Secure Order

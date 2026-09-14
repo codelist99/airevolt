@@ -39,7 +39,7 @@ export default function FinalStepPage() {
     { question: "How much time do I have to dedicate in order to make money?", answer: "Just a couple hours a week. The AI does the heavy lifting while you focus on the simple tasks." },
     { question: "What skills do I need in order to use it?", answer: "The only skill you need is to be able to listen. If you can follow simple instructions, you can succeed." },
     { question: "What if it will not make me profits?", answer: "If you do not make money, we will refund everything you invest. We stand behind our system 100% with a full money-back guarantee." },
-    { question: "Is it free?", answer: "The actual AI is free! This system is normally selling for $25,000 but you're getting test access today for just $1." },
+    { question: "Is it free?", answer: "The actual AI is free! This system is normally selling for $25,000 but you're getting access today for just $47." },
   ]
 
   return (
@@ -138,13 +138,13 @@ export default function FinalStepPage() {
               <p className="text-center font-bold text-red-600 text-sm md:text-base mb-6">ONLY 1 spot is available</p>
               <div className="text-center mb-6">
                 <p className="text-xs md:text-sm mb-1">Regular Price: <span className="line-through">$599</span></p>
-                <p className="text-sm md:text-base font-bold mb-4">Test Price: $1</p>
+                <p className="text-sm md:text-base font-bold mb-4">Today Only: $47</p>
                 <p className="text-xs text-gray-600 mb-6">Click before it's gone!</p>
               <a
                 href={checkoutUrl}
                 className="inline-flex items-center justify-center bg-[#5B5FED] hover:bg-[#4A4EDD] text-white font-bold py-3 px-6 md:px-8 rounded-full text-base md:text-lg transition-colors w-full"
               >
-                BUY NOW FOR $1
+                BUY NOW FOR $47
               </a>
               </div>
             </div>
