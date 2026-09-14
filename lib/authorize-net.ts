@@ -33,6 +33,7 @@ export async function processPayment(payment: AuthorizePayment) {
           transactionType: "authCaptureTransaction",
           amount: payment.amount.toFixed(2),
           payment: { opaqueData: { dataDescriptor: payment.opaqueDataDescriptor, dataValue: payment.opaqueDataValue } },
+          order: { description: "AI Revolution" },
           customer: { email: payment.email },
           billTo: {
             firstName: payment.firstName,
@@ -44,7 +45,9 @@ export async function processPayment(payment: AuthorizePayment) {
             country: "US",
             phoneNumber: payment.phone,
           },
-          order: { description: "AI Revolution" },
+          transactionSettings: {
+            setting: [{ settingName: "duplicateWindow", settingValue: "120" }],
+          },
         },
       },
     }),
