@@ -34,7 +34,7 @@ export default function AuthorizeCheckout({ productType = "main-47" }: { product
   const [scriptReady, setScriptReady] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState("")
-  const amount = productType === "upsell-97" ? 97 : 47
+  const amount = 1
   const isSandbox = process.env.NEXT_PUBLIC_AUTHORIZENET_ENVIRONMENT === "sandbox"
   const acceptScript = isSandbox ? "https://jstest.authorize.net/v1/Accept.js" : "https://js.authorize.net/v1/Accept.js"
 
